@@ -12,14 +12,15 @@ function searchCity(e){
     e.preventDefault();
     
     let input = document.getElementById("city").value;
-    let url = `${baseUrl}${input}&appid=${apiKey}&units=metric`;
+    let url = `${baseUrl}${input}&limit=3&appid=${apiKey}&lang=sp`;
 
-    let valid = citiesValidate(cities, input);
+    let toInput = input.toLowerCase();
+    let valid = citiesValidate(cities, toInput);
     if (valid) {
         document.getElementById("city").style.border = "solid 2px red"; 
         return false
     }
-    cities.push(input);
+    cities.push(toInput);
 
     fetch(url)
         .then(response => response.json()) 
