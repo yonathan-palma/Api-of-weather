@@ -11,20 +11,23 @@
 </head>
 <body>
     <main class="container">
-        <div class="row">
-            <form action="" id="form_city">
-                <input type="text" class="form-control" id="city" placeholder="Nombre de ciudad">
+        <section class="row form_section mt-5 pt-5 position-relative">   
+            <form action="" class="d-grid gap-3 col-md-10 mx-auto" id="form_city">
+                <input type="text" class="form-control" id="city" placeholder="Nombre de ciudad" aria-describedby="cityPrepend">
                 <input type="submit" class="btn btn-primary" value="Submit">
-                <span class="error"></span>
+                <div class="invalid-tooltip">
+                    
+                </div>
             </form>
-        </div>
-        <div class="cards_container container">
+        </section>
+       
+        <div class="cards_container container mt-5">
             <div class="row" id="cards_container">
-                
-                
             </div>
         </div>
     </main>
+
+    <!-- biblioteca de gráficos Highcharts.js -->
     
     <script src="js/index.js"></script>
 </body>

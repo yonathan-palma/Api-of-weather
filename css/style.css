@@ -6,5 +6,17 @@
     padding: 0;
 }
 body{
-    background-color: #d5e1ed;
+    background-color: #dfe5eb;
+}
+
+.form_section form{
+    grid-template-columns: 1fr auto;
+}
+#cards_container{
+    gap: 35px;
+}
+.card{
+    border-radius: 35px;
+    height: 320px;
+    /* width: 18rem; */
 }
