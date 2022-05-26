@@ -25,9 +25,18 @@
             <div class="row" id="cards_container">
             </div>
         </div>
+        
     </main>
+    <!-- <canvas width="600" height="400" id="mipanel" style="border: 1px solid black"></canvas> -->
+<script> 
+	var miLienzo = document.getElementById("mipanel");
+	var lapiz = miLienzo.getContext("2d");
+	lapiz.moveTo(150, 300);
+	lapiz.quadraticCurveTo(300,150,450,300);
+	lapiz.stroke();
+</script>
 
-    <!-- biblioteca de gráficos Highcharts.js -->
+    <!-- biblioteca de gráficos Highcharts.js and https://www.flickr.com/ -->
     
     <script src="js/index.js"></script>
 </body>

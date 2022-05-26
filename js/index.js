@@ -15,7 +15,7 @@ function searchCity(e){
     
     let inputTooltip = document.querySelector(".invalid-tooltip")
     let inputVal = input.value;
-    let url = `${baseUrl}${inputVal}&cnt=9&appid=${apiKey}&units=metric&lang=sp`;
+    let url = `${baseUrl}${inputVal}&appid=${apiKey}&units=metric&lang=sp`;
 
     let toInput = inputVal.toLowerCase();
     let valid = citiesValidate(cities, toInput);
@@ -44,16 +44,16 @@ const card_template = (data)=>{
                     <h5 class="card-title">${name}</h5>
                     <h6 class="card-subtitle mb-2 text-muted">${sys.country}</h6>
                 </div>
-                <img src="${icon}" alt="">
+                <img class="img_icon" src="${icon}" alt="">
             </div>
             <div class="lh-1" style="text-align: center;">
-                <p class="card-text fs-2">${Math.round(main.temp)}°C</p>
-                <span class="fs-5 fw-lighter">${weather[0].description}</span>
+                <p class="card-text mb-0 fs-1">${Math.round(main.temp)}°C</p>
+                <span class="text-secondary">${weather[0].description}</span>
             </div>
-            <div class="d-flex justify-content-around">
-                <div class="item">42</div>
-                <div class="item">45</div>
-                <div class="item">45</div>
+            <div class="d-flex justify-content-around align-items-center">
+                <div class="text-secondary">Humedad:<br>${main.humidity}%</div>
+    
+                <div class="text-secondary">Presion:<br>${main.pressure}mbar</div>
             </div>
         </div>
     `;
