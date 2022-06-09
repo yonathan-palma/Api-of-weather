@@ -35,7 +35,7 @@ function searchCity(e){
 
 
 const card_template = (data)=>{
-    const { main, name, sys, weather, id } = data;
+    const { main, name, sys, weather, wind, id } = data;
     const icon = `https://openweathermap.org/img/wn/${weather[0]["icon"]}@2x.png`;
     let template = `
         <div class="card-body d-grid">
@@ -50,10 +50,10 @@ const card_template = (data)=>{
                 <p class="card-text mb-0 fs-1">${Math.round(main.temp)}°C</p>
                 <span class="text-secondary">${weather[0].description}</span>
             </div>
-            <div class="d-flex justify-content-around align-items-center">
-                <div class="text-secondary">Humedad:<br>${main.humidity}%</div>
-    
-                <div class="text-secondary">Presion:<br>${main.pressure}mbar</div>
+            <div class="d-flex justify-content-around align-items-center card_footer">
+                <div class="small">Humedad:<br>${main.humidity}%</div>
+                <div class="small data_medio">V/ del viento:<br>${wind.speed}<sup> m/s</sup></div>
+                <div class="small">Presion:<br>${main.pressure}<sup> mbar</sup></div>
             </div>
         </div>
     `;
@@ -61,7 +61,7 @@ const card_template = (data)=>{
     card.classList.add("card");
     card.style.width = "18rem";
     card.innerHTML = template
-    cardContainer.append(card);
+    cardContainer.prepend(card);
     form.reset();
     input.classList.remove("is-invalid"); 
     console.log(data);
@@ -84,4 +84,12 @@ const citiesValidate = (cities, inputval)=>{
 
 // paises https://api.openweathermap.org/data/2.5/weather?q={city name},{country code}&appid={API key}
 
-    
+// var date = new Date(unix_timestamp * 1000);
+// // Hours part from the timestamp
+// var hours = date.getHours();
+// // Minutes part from the timestamp
+// var minutes = "0" + date.getMinutes();
+// // Seconds part from the timestamp
+// var seconds = "0" + date.getSeconds();
+
+// Will display time in 10:30:23 format

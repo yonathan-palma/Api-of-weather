@@ -18,8 +18,33 @@ body{
 .card{
     border-radius: 35px;
     height: 320px;
+    background-color: #18191d !important;
     /* width: 18rem; */
+}
+.card-title, .card-text, .small {
+    color: #ffffff;
+}
+.small{
+    font-weight: 100;
 }
 .img_icon{
     margin: -32px -32px 0 0 ;
+}
+.bi-search{
+    margin: 0 12px;
+}
+.card_footer{
+    background-color: #fff3;
+    border-radius: 15px;
+    padding: 0 16px;
+    font-size: 14px;
+}
+.data_medio{
+    border-left: solid 1px;
+    border-right: solid 1px;
+    padding: 0 4px;
+    margin: 0 4px;
+}
+.form-control:focus{
+    box-shadow: 0 0 0 0.10rem rgb(13 110 253 / 25%);
 }

@@ -11,10 +11,13 @@
 </head>
 <body>
     <main class="container">
-        <section class="row form_section mt-5 pt-5 position-relative">   
-            <form action="" class="d-grid gap-3 col-md-10 mx-auto" id="form_city">
+        <section class="row form_section pt-5 position-relative">   
+            <h1 class="text-center mb-5">Weather Card</h1>
+            <form action="" class="d-grid col-md-8 mx-auto" id="form_city">
                 <input type="text" class="form-control" id="city" placeholder="Nombre de ciudad" aria-describedby="cityPrepend">
-                <input type="submit" class="btn btn-primary" value="Submit">
+                <button type="submit" class="btn btn-primary">
+                    <i class="bi bi-search"></i>
+                </button>
                 <div class="invalid-tooltip">
                     
                 </div>
@@ -22,18 +25,18 @@
         </section>
        
         <div class="cards_container container mt-5">
-            <div class="row" id="cards_container">
+            <div class="row justify-content-center" id="cards_container">
             </div>
         </div>
         
     </main>
     <!-- <canvas width="600" height="400" id="mipanel" style="border: 1px solid black"></canvas> -->
 <script> 
-	var miLienzo = document.getElementById("mipanel");
-	var lapiz = miLienzo.getContext("2d");
-	lapiz.moveTo(150, 300);
-	lapiz.quadraticCurveTo(300,150,450,300);
-	lapiz.stroke();
+	// var miLienzo = document.getElementById("mipanel");
+	// var lapiz = miLienzo.getContext("2d");
+	// lapiz.moveTo(150, 300);
+	// lapiz.quadraticCurveTo(300,150,450,300);
+	// lapiz.stroke();
 </script>
 
     <!-- biblioteca de gráficos Highcharts.js and https://www.flickr.com/ -->
